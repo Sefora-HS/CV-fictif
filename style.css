@@ -1,0 +1,328 @@
+/*ELEMENTS EN COMMUNS*/
+*, 
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+ul {
+    list-style: circle inside;
+    margin-left: 1rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #BA36F7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #BA36F7;
+    text-decoration: underline;
+}
+
+/*MODIFICATION DU HEADER*/
+.header {
+    max-width: 80rem;
+    margin: 1rem auto;
+    border-bottom: 5px solid #E7BBFC;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*NAVIGATION*/
+nav {
+    position: fixed;
+    top: 10rem;
+    right: 0;
+}
+
+.menu-sticky-items {
+    list-style: none inside;
+    margin: 0;
+}
+
+.menu-sticky-item {
+    position: relative;
+    height: 3rem;
+}
+
+.menu-sticky-icon {
+  background-color: #E7BBFC;      
+  background-position: center;     
+  background-repeat: no-repeat;    
+  background-size: contain;        
+  width: 3rem;                     
+  height: 3rem;                    
+  display: inline-block;           
+  margin-right: .5rem;             
+  border: 8px solid #E7BBFC;       
+}
+
+.menu-sticky-icon-experiences {
+  background-image: url("/assets/images/experiences.png");
+}
+.menu-sticky-icon-formations {
+  background-image: url(/assets/images/formations.png);
+}
+.menu-sticky-icon-competences {
+  background-image: url(/assets/images/competences.png);
+}
+.menu-sticky-icon-loisirs {
+  background-image: url(/assets/images/loisirs.png);
+}
+
+.menu-sticky-link {
+    position: absolute;
+    top: 0;
+    left: -1.6rem;
+    background-color:#e06fff;  
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+    padding-right: 1rem; 
+    width: 13rem; 
+}
+
+.menu-sticky-link:hover {
+    color: #fff;
+    left: -11.6rem;
+}
+
+.menu-sticky-link:hover .menu-sticky-icon {
+    background-color: #BA36F7;   
+    border: 8px solid #BA36F7;   
+    transition: all .2s;
+}
+
+.header-title {
+    color:#E7BBFC;
+}
+
+.header-subtitle {
+    color: #000;
+}
+
+/*CONTENU PRINCIPAL*/
+.main-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.content{
+    flex-basis: 75%;
+    padding: 0 1rem;
+}
+
+/* SIDE BAR */
+
+.aside {
+    flex-basis: 25%;
+    border-right: 3px solid #E7BBFC;
+    padding: 0 1rem;
+}
+
+.aside img {
+    margin-bottom: 1rem;
+}
+
+.aside-contact {
+    background-color: #E7BBFC;
+    color: #fff;
+    border: 1px solid #E7BBFC;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.aside-title {
+    font-family: "Instrument Serif", serif;
+    font-weight: normal;
+    color: #BA36F7;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.aside-contact:hover {
+    background-color: #fff;
+    color: #E7BBFC;
+    transition: all .2s;
+}
+
+.aside-informations {
+    margin-bottom: 1rem;
+    color: #666;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.aside-networks {
+    list-style: none inside;
+    margin-left: 0;
+}
+
+
+/*EXPERIENCES/FORMATIONS/COMPETENCES/LOISIRS*/
+
+article {
+    margin-bottom: 1rem;
+}
+
+/* EXPERIENCES + FORMATIONS */
+.informations-title{
+    color: #E7BBFC;
+    font-family: "Instrument Serif", serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.informations-details-title {
+    font-weight: normal;
+    font-family: "Instrument Serif", serif;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.informations-details-employer {
+    font-weight: bold;
+    color: #BA36F7;
+    margin-bottom: .6rem;
+}
+
+.informations-details-date {
+    font-style: italic;
+}
+
+.informations-employer-details-phone {
+    color: #000;
+    font-size: 2rem;
+    font-family: "Instrument Serif", serif;
+}
+
+.informations-employer {
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .5);
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.informations-employer-name {
+    font-weight: bold;
+    color: #BA36F7;
+    flex: 0 0 100%;
+}
+
+.informations-employer-details {
+    flex: 0 0 33.33%;
+}
+
+/* COMPETENCES */
+.progress-container {
+    width: 10rem;
+    height: 1rem;
+    display: inline-block;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.progress-container:hover {
+    transform: scale(1.2);
+    transition: transform .2s;
+}
+
+.progress-bar {
+    height: 1rem;
+    display: block;
+    width: 50%;
+    background-color: #E7BBFC;
+    opacity: 0.8;
+    background-size: 40px 40px;
+    background-image:  repeating-linear-gradient(to right, #ffffff, #ffffff 2px, #E7BBFC 2px, #E7BBFC);
+}
+
+.informations-competences {
+    max-width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+/* LOISIRS */
+.loisirs-items {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+
+.loisir-item {
+    background: #eedbf7;
+    padding: 1.5rem;
+    width: 20%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.loisir-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.loisir-item img {
+    max-width: 40%;
+    height: auto;
+    padding-bottom: 15px;
+}
+
+.loisir-item h3 {
+    font-size: 1.2rem;
+    font-family: "Instrument Serif", serif;
+    padding-bottom: .5rem;
+    color: #000;
+}
+
+.loisir-item p {
+    font-size: .8rem;
+}
+
+
+
+
+
+
